@@ -33,6 +33,19 @@ services:
     networks:
       - laravel
 
+  nginx:
+    image: nginx:alpine
+    container_name: laravel-nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - laravel
+    depends_on:
+      - app
 
 networks:
   laravel:
