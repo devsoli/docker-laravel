@@ -16,7 +16,7 @@ git clone https://github.com/devsoli/docker-laravel.git
 cd docker-laravel
 ```
 ### 2. Create the environment file
-copy the .env.example file to .env:
+copy the **.env.example** file to **.env**:
 ```bash
 cp .env.example .env
 ```
@@ -54,7 +54,7 @@ Migrate the database:
 ```bash
 docker-compose exec app php artisan migrate
 ```
-### 7. Access the application
+### 8. Access the application
 After successfully running the above commands, your Laravel application should be accessible at http://localhost.
 
 ## Useful commands
